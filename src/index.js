@@ -5,6 +5,8 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
+import ItemDetail from './components/ItemDetail';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import reportWebVitals from './reportWebVitals';
 
@@ -13,7 +15,12 @@ let store = createStore(todoApp)
 
 render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path="/detail" element={<ItemDetail />} />
+      </Routes>
+    </Router>
   </Provider>,
   document.getElementById('root')
 )

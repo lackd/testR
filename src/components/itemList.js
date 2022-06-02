@@ -4,31 +4,30 @@ import { API_KEY } from '../config/conection'
 import Item from './item'
 import './App.css';
 
-const ItemList = ({ items, onTodoClick, setItemList }) => {
+const ItemList = ({ items, onItemClick, setItemList, filter }) => {
 
     useEffect(() => {
-        if (items == undefined || items.length == 0) {
-            getAll(`/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
-                .then(response => {
-                    setItemList(response.data.results)
-                }).catch(error => {
-                    console.log(error)
-                })
-        }
-    }, [])
+        getAll(`/${filter}/popular?api_key=${API_KEY}&language=en-US&page=1`)
+            .then(response => {
+                setItemList(response.data.results)
+            }).catch(error => {
+                console.log(error)
+            })
+    }, [filter])
 
 
     return (
-        < div className='container-fluid'>
-            <div className='row mx-3 my-3'>
+        < div className='main-container container-fluid'>
+            <div className='row mx-1 my-3'>
 
                 {
                     items && items.length > 0 ?
                         items.map(item =>
                             <Item
                                 key={item.id}
+                                type={filter}
                                 item={item}
-                                onClick={() => onTodoClick(item.id)}
+                                onClick={() => onItemClick(item)}
                             />
                         )
                         : <span></span>
