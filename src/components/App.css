@@ -29,6 +29,10 @@
   max-width: 1093px;
 }
 
+.related-container {
+  max-width: 780px;
+}
+
 .item-container {
   flex-direction: column;
   margin-top: 10px;
@@ -48,6 +52,7 @@
 }
 
 .detail-container {
+  min-width: 780px;
   max-width: 780px;
   color: white;
   font-size: 14px;
@@ -74,6 +79,19 @@
   cursor: pointer;
 }
 
+.back-button {
+  background-color: black;
+  border-radius: 5px;
+  align-self: flex-start;
+  width: 50px;
+  padding: 5px;
+  color: rgb(250, 250, 250);
+  border: 1px solid rgb(130, 130, 130);
+  font-size: small;
+  cursor: pointer;
+  margin-block: 15px;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -85,6 +103,18 @@
   justify-content: space-between;
   height: 330px;
   width: 220px;
+  box-shadow: 0px 0px px rgb(172, 172, 172);
+  background: rgb(30, 30, 30);
+  background: linear-gradient(0deg, rgba(9, 9, 9, 1) 2%, rgba(0, 33, 40, 0) 40%, rgba(0, 212, 255, 0) 100%);
+}
+
+.overlay-related {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 232px;
+  width: 154px;
   box-shadow: 0px 0px px rgb(172, 172, 172);
   background: rgb(30, 30, 30);
   background: linear-gradient(0deg, rgba(9, 9, 9, 1) 2%, rgba(0, 33, 40, 0) 40%, rgba(0, 212, 255, 0) 100%);
