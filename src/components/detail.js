@@ -44,7 +44,9 @@ const Detail = ({ currentItem, items, onItemClick }) => {
                         {currentItem.vote_average}
                     </p>
                 </div>
-                <img src={'https://www.themoviedb.org/t/p/w780/' + currentItem.backdrop_path} />
+                <div className='backdrop-container'>
+                    <img src={'https://www.themoviedb.org/t/p/w780/' + currentItem.backdrop_path} />
+                </div>
             </header>
             <div className='separator'></div>
             <div className='detail-container'>
