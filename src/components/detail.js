@@ -37,7 +37,7 @@ const Detail = ({ currentItem, items, onItemClick }) => {
         <div className="App-body">
             <header>
                 <div className='detail-overlay'>
-                    <p style={{ color: 'white', paddingInline: 10, fontSize: 40, fontWeight: 'bold' }}>
+                    <p className='title'>
                         {currentItem.title ?? currentItem.name}
                     </p>
                     <p style={{ color: 'yellow', paddingInline: 10, fontSize: 20, fontWeight: 'bolder' }}>
@@ -45,7 +45,7 @@ const Detail = ({ currentItem, items, onItemClick }) => {
                     </p>
                 </div>
                 <div className='backdrop-container'>
-                    <img src={'https://www.themoviedb.org/t/p/w780/' + currentItem.backdrop_path} />
+                    <img className='img-responsive' src={'https://www.themoviedb.org/t/p/w780/' + currentItem.backdrop_path} />
                 </div>
             </header>
             <div className='separator'></div>

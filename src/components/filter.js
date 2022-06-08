@@ -2,7 +2,7 @@ import React from 'react'
 import FilterLink from '../containers/filterLink'
 
 const Filter = () => (
-    <div className='filter-container w-25 my-3 py-3'>
+    <div className='filter-container w-100 my-3 py-3'>
         <div>
             <FilterLink filter="movie">
                 Movies
