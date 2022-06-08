@@ -12,7 +12,7 @@ const Item = ({ onClick, item, type }) => {
 
 
     return (
-        <div onClick={() => { navigateToDetail(item) }} className='item-container col-md-3'>
+        <div onClick={() => { navigateToDetail(item) }} className='item-container col-sm-6 col-md-4 col-lg-3'>
             <div className='overlay-related'>
                 <p style={{ color: 'yellow', paddingInline: 10, fontSize: 15, fontWeight: 'bolder', textAlign: 'end' }}>
                     {item.vote_average}

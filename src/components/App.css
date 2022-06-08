@@ -52,7 +52,6 @@
 }
 
 .detail-container {
-  min-width: 780px;
   max-width: 780px;
   color: white;
   font-size: 14px;
@@ -141,7 +140,7 @@
 .separator {
   height: 20px;
   margin-top: 0.5px;
-  min-width: 100vmax;
+  min-width: 99vmax;
   background: rgb(200, 200, 200);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 2%, rgba(0, 33, 40, 0) 40%, rgba(200, 200, 200, 1) 100%);
 }
