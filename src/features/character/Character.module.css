@@ -1,0 +1,46 @@
+.imgContainer {
+    height: 25em;
+    width: 25em;
+}
+
+.imgComicContainer {
+    height: 25em;
+    width: 15em;
+}
+
+.titleDivision {
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: italic;
+    margin-block: 30px;
+    background-color: black;
+    color: #FFF;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.footerDetail {
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: italic;
+    background-color: black;
+    color: #FFF;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.rowItem {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    font-size: larger;
+    font-weight: bold;
+    margin-inline: 30px;
+    text-align: justify;
+}

@@ -1,0 +1,32 @@
+.App {
+  background-color: #ebebeb;
+  text-align: center;
+}
+
+.App-body {
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  max-width: 1600px;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+footer {
+  position: fixed;
+  height: 60px;
+  color: white;
+  background-color: black;
+  max-width: 1600px;
+  bottom: 0;
+  width: 100%;
+  margin-left: -10px;
+}
