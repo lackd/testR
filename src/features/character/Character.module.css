@@ -4,8 +4,8 @@
 }
 
 .imgComicContainer {
-    height: 25em;
-    width: 15em;
+    height: 20em;
+        width: 13.5em;
 }
 
 .titleDivision {
@@ -19,12 +19,11 @@
     padding-left: 30px;
 }
 
-.footerDetail {
+.headerDetail {
     cursor: pointer;
     font-size: x-large;
     font-weight: bolder;
     font-style: italic;
-    background-color: black;
     color: #FFF;
     padding: 10px;
     padding-left: 30px;

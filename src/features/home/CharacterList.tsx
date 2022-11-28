@@ -12,8 +12,10 @@ export function CharacterList() {
     const hash = md5(timeStamp + PRIVATE_KEY + PUBLIC_KEY)
     const [characters, setCharacters] = useState([]);
     const [pageCount, setPageCount] = useState(0);
+    const [busy, setBusy] = useState(true)
 
     useEffect(() => {
+        setBusy(true)
         getCharacterList()
     }, [])
 
@@ -22,8 +24,10 @@ export function CharacterList() {
             .then(response => {
                 setCharacters(response.data.data.results);
                 setPageCount(response.data.data.total)
+                setBusy(false)
             })
             .catch(error => {
+                setBusy(false)
                 console.log(error)
             })
     }
@@ -38,7 +42,14 @@ export function CharacterList() {
             <div>
                 <p className={styles.bigTitle}>All Marvel's Comics Characters</p>
             </div>
-            <div className='row mx-1 my-3'>
+            {busy ?
+                <div className='text-center'>
+                    <div className="spinner-grow" style={{ width: '2em', height: '2em', marginInline: 3 }} role="status" />
+                    <div className="spinner-grow" style={{ width: '2.5em', height: '2.5em', marginInline: 3 }} role="status" />
+                    <div className="spinner-grow" style={{ width: '3em', height: '3em', marginInline: 3 }} role="status" />
+                </div>
+                :
+                <div className='row mx-1 my-3 d-flex justify-content-center'>
                 {characters.map((item: any) => {
                     return (
                         <div key={item.id} onClick={() => {
@@ -54,6 +65,7 @@ export function CharacterList() {
                     )
                 })}
             </div>
+            }
             <Paginator
                 className={styles.paginatorContainer}
                 activeClassName={styles.selected}

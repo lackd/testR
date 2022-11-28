@@ -37,6 +37,7 @@ export function CharacterDetail() {
 
     return (
         <div className='main-container container-fluid'>
+            <header><p onClick={() => navigate(-1)} className={styles.headerDetail}>Home</p></header>
             <p className={styles.titleDivision}>{characterInfo.name}</p>
             <div className={styles.rowItem}>
                 <img className={styles.imgContainer} src={characterInfo.thumbnail.path + '.' + characterInfo.thumbnail.extension} />
@@ -53,7 +54,6 @@ export function CharacterDetail() {
                 })
                 }
             </div>
-            <footer><p onClick={() => navigate(-1)} className={styles.footerDetail}>Home</p></footer>
         </div>
     )
 }
